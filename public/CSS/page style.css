@@ -1,0 +1,332 @@
+.content-head { 
+   background-color: #5cb85c; 
+   border: 2px solid tomato;
+   border-left: 10px solid red;
+   font-size: 15px; 
+   color: white; 
+   text-align: center;
+  } 
+
+  .maincontent-head { 
+   background-color: rgb(45, 112, 84); 
+   border-style: solid;
+   border-width: 2px 10px 8px 10px;
+   font-size: 19px; 
+   border-color: hotpink;
+   text-align: center;
+   color: white;
+   padding: 3px 3px;
+
+
+  } 
+
+  .content-style { 
+   background-color: rgb(239, 238, 255);
+   font-family: SutonnyMJ;
+   font-size: 12px;
+   padding: 12px 7px;
+   
+  } 
+
+  .main-content{ 
+   font-family: SutonnyMJ;
+   color:black;
+   font-size: 15px;
+  }
+
+  .main-content::first-letter{ 
+   font-family: SutonnyMJ;
+   color:rgb(162, 56, 137); 
+   font-size: x-large;
+  } 
+
+
+  .button-style {
+  display: inline-block;
+  color: white;
+  background-color: brown;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  padding: 3px 2px;
+  text-decoration: none;
+}
+
+.button-style:hover {
+  background-color:#800080;
+}
+
+
+  .marquee-box {
+  	width: 96%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    
+
+ marquee.marquee-style{
+ 	background-color: rgb(221, 212, 248);
+ 	color: rgb(0, 0, 255) ;
+ /*	font-family: SutonnyMJ;*/
+ 	font-size: 15px;
+ 	border: 1px dotted black;
+  border-radius: 10px;
+  padding: 5px 0px;
+
+ }
+
+ 
+
+ hr{
+ 	color:green;
+ }
+
+div.DivStyle{
+  top:0;
+  margin-top:0;
+  padding:0px 0px 5px 0px;
+  border: 0; 
+  background-color: white;
+  width:100%;
+  
+}
+
+
+ a.link-deco{
+
+ 	text-decoration: none;
+ 	color: #00008B;
+
+  }
+
+
+ a.link-deco:visited{
+  text-decoration: none;
+ 	color:red;
+ }
+
+  a.link-deco:hover{
+
+ 	text-decoration: none;
+ 	background-color: transparent;
+ 	color: blue;
+ }
+
+ a.link-deco:active{
+
+ 	color:hotpink;
+  
+ }
+  
+ 
+ #table-style {
+  font-family: "Trebuchet MS", Arial, Helvetica,SutonnyMJ, sans-serif;
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+  
+}
+
+#table-style td, #table-style th {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+#table-style tr:nth-child(even){background-color: #f2f2f2;}
+
+#table-style tr:hover {background-color: #ddd;}
+
+#table-style th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: #2F4F4F;
+  color: white;
+}
+
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background:#32CD32;
+}
+
+::selection {
+  color:white;
+  background: #32CD32;
+}
+
+
+/* Image hover & style */
+.textWithBlurred{
+    width:135px;
+    height:160px;
+    display:inline-block;
+    position:relative;
+    transition:3s;
+    margin:0px 20px 10px 0px;
+    background: #008B8B;
+    
+  }
+  
+  .textWithBlurred img{
+    width:135px;
+    height:160px;
+    transition:1s;
+    border-radius:50%;
+  }
+  
+  .textWithBlurred:hover img{
+    filter:blur(0.01px) brightness(70%);
+    
+  }
+   
+  .textWithBlurred :not(img){
+    position:absolute;
+    z-index:1;
+    top:30%;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+  }
+  
+  .textWithBlurred p {
+    color:#00FF7F;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center
+  }
+  
+  .textWithBlurred:hover :not(img){
+    opacity:1;
+  }
+ /* End Image hover & style */
+
+
+
+ /* Image gallary & style */
+
+   div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.GalleryResponsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  ..GalleryResponsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  ..GalleryResponsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ /* End Image gallary & style */
+
+
+ video {
+  width: 100%;
+  height: auto;
+}
+
+
+ /* Form style */
+
+input[type=text],input[type=email],input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.formcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* End Form style */
+
+
+  
