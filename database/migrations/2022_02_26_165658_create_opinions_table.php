@@ -15,11 +15,11 @@ class CreateOpinionsTable extends Migration
     {
         Schema::create('opinions', function (Blueprint $table) {
             $table->id();
-            $table->name();
-            $table->mobile_no;
-            $table->email;
-            $table->address;
-            $table->comments;
+            $table->text('fullname');
+            $table->string('mobile_no');
+            $table->string('email');
+            $table->string('address');
+            $table->string('comments');
             $table->timestamps();
         });
     }

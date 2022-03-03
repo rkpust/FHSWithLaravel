@@ -41,8 +41,8 @@
 
 
          <div class="formcontainer">
-             <form action="contact.php" method="post">
-                
+             <form action="opinion" method="post">
+
                 @csrf
 
              <div class="row">

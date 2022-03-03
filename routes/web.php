@@ -112,4 +112,6 @@ Route::get('/meritorious-students', [ OnlyViewReturnController::class , 'Meritor
 
 Route::get('/contact', [ OpinionsController::class , 'Contact']);
 
+Route::post('/opinion', [ OpinionsController::class , 'OpinionStore']);
+
 
