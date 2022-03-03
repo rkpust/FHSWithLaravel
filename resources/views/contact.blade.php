@@ -42,6 +42,9 @@
 
          <div class="formcontainer">
              <form action="contact.php" method="post">
+                
+                @csrf
+
              <div class="row">
              <div class="col-25">
                 <label for="fullname">নামঃ</label>

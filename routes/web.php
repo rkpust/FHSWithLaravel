@@ -16,6 +16,7 @@ use App\Http\Controllers\ComputerLabController;
 use App\Http\Controllers\SototaStoreController;
 use App\Http\Controllers\MagazineController;
 use App\Http\Controllers\OnlyViewReturnController;
+use App\Http\Controllers\OpinionsController;
 
 
 
@@ -109,6 +110,6 @@ Route::get('/former-persons', [ OnlyViewReturnController::class , 'FormerPersons
 
 Route::get('/meritorious-students', [ OnlyViewReturnController::class , 'MeritoriousStudents']);
 
-Route::get('/contact', [ OnlyViewReturnController::class , 'Contact']);
+Route::get('/contact', [ OpinionsController::class , 'Contact']);
 
 

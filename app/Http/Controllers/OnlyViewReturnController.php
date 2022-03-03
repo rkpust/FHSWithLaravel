@@ -131,12 +131,6 @@ class OnlyViewReturnController extends Controller
     }
 
 
-    public function Contact()
-    {
-        return view('contact');
-    }
-
-
 
 
 
