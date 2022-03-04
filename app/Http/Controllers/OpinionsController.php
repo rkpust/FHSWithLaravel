@@ -17,8 +17,15 @@ class OpinionsController extends Controller
 
     public function OpinionStore(Request $request)
     {
-      
-      // print_r($request->input());
+    
+
+         $request->validate([
+            'fullname' => 'required',
+            'mobileno' => 'required|min:11',
+            'address' => 'required',
+            'subject' => 'required'
+
+        ]);
 
         $data = array(
 
@@ -30,8 +37,18 @@ class OpinionsController extends Controller
             
         );
 
-        DB::table('opinions')->insert($data);
-        return redirect()->back();
+        $result  = DB::table('opinions')->insert($data);
+
+        if($result){
+
+            return redirect()->back()->With('success','আপনার মূল্যবান মতামতের জন্য ধন্যবাদ ।');
+
+        }
+        else{
+            return redirect()->back()->With('fail','কোন সমস্যার কারণে আপনার মূল্যবান মতামত সংরক্ষণ করা যায়নি ।');
+        }
+
+        
 
 
     }

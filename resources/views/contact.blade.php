@@ -41,6 +41,20 @@
 
 
          <div class="formcontainer">
+
+              <div style=" color:red; text-align:center">
+             @if(session()->has('success'))
+             {{ session()->get('success')}}
+             @endif
+
+             @if(session()->has('fail'))
+             {{ session()->get('fail')}}
+             @endif
+         </div>
+
+         <br>
+         <br>
+
              <form action="opinion" method="post">
 
                 @csrf
@@ -50,7 +64,8 @@
                 <label for="fullname">নামঃ</label>
              </div>
              <div class="col-75">
-             <input type="text" id="fullname" name="fullname" placeholder="আপনার পূর্ণ নাম লিখুন..." required>
+             <input type="text" id="fullname" name="fullname" placeholder="আপনার পূর্ণ নাম লিখুন..." value = "{{old('fullname')}}">
+             <span style="color:red"> @error('fullname'){{ $message }} @enderror </span>
              </div>
          </div>
 
@@ -60,7 +75,8 @@
                 <label for="mobileno">মোবাইল নম্বরঃ</label>
              </div>
              <div class="col-75">
-                 <input type="text" id="mobileno" name="mobileno" placeholder="আপনার মোবাইল নম্বর লিখুন..." required>
+                 <input type="text" id="mobileno" name="mobileno" placeholder="আপনার মোবাইল নম্বর লিখুন..." value = "{{old('mobileno')}}" >
+                 <span style="color:red"> @error('mobileno'){{ $message }} @enderror </span>
              </div>
          </div>
 
@@ -69,7 +85,8 @@
                 <label for="email">ই-মেইলঃ</label>
              </div>
              <div class="col-75">
-                 <input type="email" id="email" name="email" placeholder="আপনার ই-মেইল আড্রেসটি লিখুন...">
+                 <input type="email" id="email" name="email" placeholder="আপনার ই-মেইল আড্রেসটি লিখুন..." value = "{{old('email')}}">
+                 <span style="color:red"> @error('email'){{ $message }} @enderror </span>
              </div>
          </div>
 
@@ -78,7 +95,8 @@
                 <label for="address">ঠিকানাঃ</label>
              </div>
              <div class="col-75">
-                 <input type="text" id="address" name="address" placeholder="আপনার পূর্ণ ঠিকানা লিখুন..." required>
+                 <input type="text" id="address" name="address" placeholder="আপনার পূর্ণ ঠিকানা লিখুন..." value = "{{old('address')}}" >
+                 <span style="color:red"> @error('address'){{ $message }} @enderror </span>
              </div>
          </div>
 
@@ -88,7 +106,9 @@
                  <label for="subject">মতামতঃ</label>
              </div>
              <div class="col-75">
-                 <textarea id="subject" name="subject" placeholder="আপনার মতামত লিখুন..." style="height:200px" required></textarea>
+                 <textarea id="subject" name="subject" placeholder="আপনার মতামত লিখুন..." style="height:200px"></textarea>
+
+                 <span style="color:red"> @error('subject'){{ $message }} @enderror </span>
              </div>
          </div>
 
@@ -98,39 +118,7 @@
 
          </form>
 
-         <?php
 
-          $conn = mysqli_connect("localhost", "fhsadmin", "fhsadmin", "fhs");
-          if(!$conn){
-         echo ("Error Connection:".mysqli_connect_error());
-          }
-          
-         if(isset($_POST['Submit'])){
-         $name = $_POST["fullname"];
-         $mobile = $_POST["mobileno"];
-         $email = $_POST['email'];
-         $address = $_POST['address'];
-         $subject = $_POST['subject'];
-      
-         $sql = "INSERT INTO opinions (name,phone,email,address,comments) VALUES ('$name', '$mobile', '$email','$address','$subject')";
-         
-         if(mysqli_query($conn, $sql)){
-
-         echo "<p>\"<b>$name</b>\" আপনার মূল্যবান মতামতের জন্য ধন্যবাদ ।</p>";
- 
-         } 
-
-         else{
-          echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-         }
- 
-         // Close connection
-         mysqli_close($conn);
-   
-         }
- 
-         ?>
-         
          </div>
 
 

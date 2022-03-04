@@ -17,7 +17,7 @@ class CreateOpinionsTable extends Migration
             $table->id();
             $table->text('fullname');
             $table->string('mobile_no');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('address');
             $table->string('comments');
             $table->timestamps();
