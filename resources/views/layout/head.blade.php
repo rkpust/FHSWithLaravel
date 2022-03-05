@@ -11,4 +11,5 @@
      <link rel="stylesheet" type="text/css" href="{{ asset('CSS') }}/Layout&ResponsiveDropdownMenu.css">
      <link rel="stylesheet" type="text/css" href="{{ asset('CSS/Slideshow.css') }}">
      <link rel="stylesheet" type="text/css" href="{{ asset('CSS/page style.css') }}">
-     <link rel="stylesheet" type="text/css" href="{{ asset('CSS') }}/Modal.css">
+     <link rel="stylesheet" type="text/css" href="{{asset('CSS') }}/Modal.css"> 
+     <link rel="stylesheet" type="text/css" href="{{ asset('CSS/loginForom.css') }}">

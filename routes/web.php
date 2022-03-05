@@ -17,6 +17,7 @@ use App\Http\Controllers\SototaStoreController;
 use App\Http\Controllers\MagazineController;
 use App\Http\Controllers\OnlyViewReturnController;
 use App\Http\Controllers\OpinionsController;
+use App\Http\Controllers\LoginController;
 
 
 
@@ -114,4 +115,6 @@ Route::get('/contact', [ OpinionsController::class , 'Contact']);
 
 Route::post('/opinion', [ OpinionsController::class , 'OpinionStore']);
 
+
+Route::get('/login', [ LoginController::class , 'Login']);
 
