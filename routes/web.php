@@ -118,3 +118,8 @@ Route::post('/opinion', [ OpinionsController::class , 'OpinionStore']);
 
 Route::get('/login', [ LoginController::class , 'Login']);
 
+Route::post('/check', [ LoginController::class , 'Check']);
+
+Route::get('/admin/dashboard', [ LoginController::class , 'dashboard']);
+
+

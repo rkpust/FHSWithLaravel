@@ -1,6 +1,6 @@
 <div class="footer">
          <div style="padding-bottom: 5px;">
-           Copyright(&copy;) 2020. All Rights Reserved. <a style="font-variant: small-caps;" class="link-deco" href="index.php" title="ফুলশো উচ্চ বিদ্যালয়">Fulsho High School.</a>
+           Copyright(&copy;) 2019-2022. All Rights Reserved. <a style="font-variant: small-caps;" class="link-deco" href="index.php" title="ফুলশো উচ্চ বিদ্যালয়">Fulsho High School.</a>
          </div>
          
          <span>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -24,7 +26,30 @@ class LoginController extends Controller
 
         ]);
 
-        return view('auth.login');
+        $adminInfo = Admin::where('email','=',$request->email)->first();
+
+        if(!$adminInfo){
+            return back()->with('fail','Email address is not correct.');
+        }
+
+        else{
+            if(Hash::check($request->password,$adminInfo->password)){
+                $request->session()->put('LoggedAdmin',$adminInfo->id);
+
+                return redirect('admin/dashboard');
+
+            }
+            else{
+                return back()->with('fail','Password is not correct.');
+            }
+        }
+
     }
+
+    function dashboard()
+    {
+        $data = ['LoggedAdminInfo'=>Admin::where('id','=',session('LoggedAdmin'))->first()];
+        return view('admin.dashboard',$data);
+     }
     
 }
