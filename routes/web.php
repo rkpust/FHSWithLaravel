@@ -120,6 +120,8 @@ Route::get('/login', [ LoginController::class , 'Login']);
 
 Route::post('/check', [ LoginController::class , 'Check']);
 
+Route::get('/logout', [ LoginController::class , 'Logout']);
+
 Route::get('/admin/dashboard', [ LoginController::class , 'dashboard']);
 
 

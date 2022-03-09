@@ -46,6 +46,14 @@ class LoginController extends Controller
 
     }
 
+    function Logout(){
+        if(session()->has('LoggedAdmin')){
+            session()->pull('LoggedAdmin');
+            return redirect('/login');
+        }
+
+    }
+
     function dashboard()
     {
         $data = ['LoggedAdminInfo'=>Admin::where('id','=',session('LoggedAdmin'))->first()];

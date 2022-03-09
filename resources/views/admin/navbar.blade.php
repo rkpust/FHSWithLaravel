@@ -1,6 +1,6 @@
 <div class="topnav" id="myTopnav">
 
-         <a class="active" href="../FHS/adminpanel.php" title="Admin Panel" >&#127968;</a>
+         <a class="active" href="dashboard" title="Admin Panel" >&#127968;</a>
 
  
      
