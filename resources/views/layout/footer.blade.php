@@ -1,6 +1,6 @@
 <div class="footer">
          <div style="padding-bottom: 5px;">
-           Copyright(&copy;) 2019-2022. All Rights Reserved. <a style="font-variant: small-caps;" class="link-deco" href="index.php" title="ফুলশো উচ্চ বিদ্যালয়">Fulsho High School.</a>
+           Copyright(&copy;) 2019-2022. All Rights Reserved. <a style="font-variant: small-caps;" class="link-deco" href="/" title="ফুলশো উচ্চ বিদ্যালয়">Fulsho High School.</a>
          </div>
          
          <span>
@@ -31,7 +31,7 @@
                                   
                              <div style="overflow:auto;">
                                  
-                                 <img  src="image/Rezaul.jpg" alt="Rezaul Karim" title="Md. Rezaul Karim" style=" max-width:100%;height: 250px;float:left; margin-left: 15px;margin-right: 10px;">
+                                 <img  src="{{ asset('image/Rezaul.jpg') }}" alt="Rezaul Karim" title="Md. Rezaul Karim" style=" max-width:100%;height: 250px;float:left; margin-left: 15px;margin-right: 10px;">
                                  <p style="margin: 0px 5px 0px 5px;font-family:Poor Richard;font-size: 20px;​">
 
                                  <a class="link-deco" href="https://www.facebook.com/profile.php?id=100006482663374" title="মোঃ রেজাউল করিম" target="_blank"><b style="color:#7B68EE;">Md. Rezaul Karim </b></a>is a web developer who is studying <b title="Bachelor of Science">B.Sc Engineering</b> in <b title="কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং">Computer Science & Engineering </b><a class="link-deco" href="http://pust.ac.bd/academic/departments/dept_teachers/D01/" title="Computer Science & Engineering" target="_blank">(CSE)</a> at <b title="পাবনা বিজ্ঞান ও প্রযুক্তি বিশববিদ্যালয়">Pabna University of Science & Technology</b> <a class="link-deco" href="http://www.pust.ac.bd/" title="Pabna University of Science & Technology" target="_blank">(PUST)</a>. 

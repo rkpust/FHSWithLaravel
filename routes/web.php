@@ -116,12 +116,17 @@ Route::get('/contact', [ OpinionsController::class , 'Contact']);
 Route::post('/opinion', [ OpinionsController::class , 'OpinionStore']);
 
 
-Route::get('/login', [ LoginController::class , 'Login']);
 
 Route::post('/check', [ LoginController::class , 'Check']);
 
 Route::get('/logout', [ LoginController::class , 'Logout']);
 
-Route::get('/admin/dashboard', [ LoginController::class , 'dashboard']);
+Route::group(['middleware'=>['AuthCheck']],function(){
+	
+	Route::get('/login', [ LoginController::class , 'Login']);
+
+	Route::get('/admin/dashboard', [ LoginController::class , 'dashboard']);
+
+});
 
 
