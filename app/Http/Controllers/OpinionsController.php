@@ -52,4 +52,13 @@ class OpinionsController extends Controller
 
 
     }
+
+
+    function ShowOpinion(){
+        $data = array(
+            'list'=> DB::table('opinions')->get()
+        );
+
+        return view('admin.show-opinions',$data);
+     }
 }

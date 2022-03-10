@@ -59,5 +59,6 @@ class LoginController extends Controller
         $data = ['LoggedAdminInfo'=>Admin::where('id','=',session('LoggedAdmin'))->first()];
         return view('admin.dashboard',$data);
      }
+
     
 }

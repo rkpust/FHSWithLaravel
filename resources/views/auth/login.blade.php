@@ -33,7 +33,7 @@
             @csrf
 
             <p>Email</p>
-            <input type="email" name="email" id="email" placeholder="Enter Email" value = "{{old('email')}}"> 
+            <input type="email" name="email" id="email" placeholder="Enter Email" value = "{{ old('email') }}"> 
             <span style="color:red"> @error('email'){{ $message }} @enderror </span>
             <p>Password</p>
             <input type="password" name="password" id="password" placeholder="Enter Password" value = "{{old('password')}}">

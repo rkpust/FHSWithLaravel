@@ -72,7 +72,7 @@
              </div>
          </div>
 
-             <a href="../FHS/ShowOpinions.php">মতামত</a>
+             <a href=" {{route('admmin.show-opinions') }}">মতামত</a>
 
 
              <a class="icon" href="javascript:void(0);" title="মেন্যু" onclick="ResponsiveNavFunction()">&#9776;</a>

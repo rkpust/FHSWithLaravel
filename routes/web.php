@@ -126,6 +126,7 @@ Route::group(['middleware'=>['AuthCheck']],function(){
 	Route::get('/login', [ LoginController::class , 'Login']);
 
 	Route::get('/admin/dashboard', [ LoginController::class , 'dashboard']);
+	Route::get('/show-opinions', [ OpinionsController::class , 'ShowOpinion'])->name('admmin.show-opinions');
 
 });
 
